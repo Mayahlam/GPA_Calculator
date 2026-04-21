@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    
+    <div class="container">
+        <h1>GPA Calculator</h1>
+        <form id="gpa-form">
+            <div id="courses-container">
+                <div class="course-entry">
+                    <p>Course</p>
+                    <input type="text" name="courseName" placeholder="Course Name" required class="courseName"> <br>
+                    <p>Credit Units</p>
+                    <input type="number" name="credits" placeholder="Credits" min="0" step="1" max="8" required class="credits"> <br>
+                    <p>Score</p>
+                    <input type="number" name="score" placeholder="Score" required class="course-score">
+                </div>
+            </div>
+        </form>
+
+        <table id="coursesTable">
+            <thead>
+                <tr>
+                    <th>Courses</th>
+                    <th>Grades</th>
+                    <th>Units</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="buttons">
+            <!-- <button type="button" class="removeCourseBtn" onclick="removeCourse()">Remove Course</button> -->
+
+            <button type="button" id="add-course-btn" onclick="addCourse()">Add Course <span class="addBtn"> + </span></button>
+
+            <button type="button" onclick="calcGpa()" id="calc-gpa-btn">Calculate GPA</button>
+            <p id="gpaResult"></p>
+       </div>
+    </div>
+     
+    <script src="main.js"></script>
+</body>
+
+
+    
